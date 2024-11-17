@@ -1,0 +1,27 @@
+<div class="ddcontainer">
+    <h1>Exercice Drag and Drop</h1>
+    <p class="ddinstructions">Glissez les mots dans la colonne appropriée. Cliquez sur "Soumettre" pour vérifier vos réponses.</p>
+  
+  <!-- Liste des mots à glisser -->
+  <div class="word-list" id="wordList">
+    <div class="ddword" draggable="true" data-category="Fruit">Pomme</div>
+    <div class="ddword" draggable="true" data-category="Fruit">Banane</div>
+    <div class="ddword" draggable="true" data-category="Légume">Carotte</div>
+    <div class="ddword" draggable="true" data-category="Légume">Courgette</div>
+    <div class="ddword" draggable="true" data-category="Fruit">Orange</div>
+    <div class="ddword" draggable="true" data-category="Légume">Poivron</div>
+  </div>
+  
+  <!-- Catégories (zones de drop) -->
+  <div class="ddcategories">
+    <div class="ddcategory" data-category="Fruit">
+      <div class="ddcategory-title">Fruits</div>
+    </div>
+    <div class="ddcategory" data-category="Légume">
+      <div class="ddcategory-title">Légumes</div>
+    </div>
+  </div>
+
+  <!-- Bouton de soumission -->
+  <button class="submit-btn" onclick="checkAnswers()">Soumettre</button>
+<div class="ddresult" id="ddresult"></div>
