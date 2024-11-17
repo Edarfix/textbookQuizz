@@ -1,0 +1,61 @@
+<div class="ddcontainer">
+    <h1>Practical exercise</h1>
+    <p class="ddinstructions">Match the definitions to the words !
+</p>
+  
+  <!-- Liste des mots à glisser -->
+
+<div class="word-list" id="wordList">
+  <div class="ddword" draggable="true" data-category="Artificial General Intelligence">
+    "AI capable of cross-domain learning and problem-solving, like humans" - Muehlhauser (2013)
+  </div>
+  <div class="ddword" draggable="true" data-category="Artificial Narrow Intelligence">
+    "AI specialized in specific tasks, e.g., Siri, Alexa, autonomous vehicles"
+  </div>
+  <div class="ddword" draggable="true" data-category="Artificial Intelligence">
+    "AI infers from input to generate outputs that impact environments" - OECD.AI (2023)
+  </div>
+  <div class="ddword" draggable="true" data-category="Artificial Super Intelligence">
+    "AI exceeding human capabilities in nearly all domains" - Bostrom (2014)
+  </div>
+  <div class="ddword" draggable="true" data-category="Human-Level AI">
+    "AI matching human intelligence in economically valuable work"
+  </div>
+  <div class="ddword" draggable="true" data-category="Transformative AI">
+    "AI triggering transitions as impactful as the agricultural or industrial revolutions" - Karnofsky (2016)
+  </div>
+  <div class="ddword" draggable="true" data-category="Intelligence">
+    "An agent's ability to achieve goals in diverse environments" - Legg & Hutter (2007)
+  </div>
+  
+</div>
+
+<!-- Catégories (zones de drop) -->
+<div class="ddcategories">
+  <div class="ddcategory" data-category="Intelligence">
+    <div class="ddcategory-title">Intelligence</div>
+  </div>
+  <div class="ddcategory" data-category="Artificial Intelligence">
+    <div class="ddcategory-title">Artificial Intelligence</div>
+  </div>
+  <div class="ddcategory" data-category="Artificial Narrow Intelligence">
+    <div class="ddcategory-title">Artificial Narrow Intelligence</div>
+  </div>
+  <div class="ddcategory" data-category="Artificial General Intelligence">
+    <div class="ddcategory-title">Artificial General Intelligence</div>
+  </div>
+  <div class="ddcategory" data-category="Human-Level AI">
+    <div class="ddcategory-title">Human-Level AI</div>
+  </div>
+  <div class="ddcategory" data-category="Transformative AI">
+    <div class="ddcategory-title">Transformative AI</div>
+  </div>
+  <div class="ddcategory" data-category="Artificial Super Intelligence">
+    <div class="ddcategory-title">Artificial Super Intelligence</div>
+  </div>
+</div>
+
+
+  <!-- Bouton de soumission -->
+  <button class="submit-btn" onclick="checkAnswers()">Submit</button>
+<div class="ddresult" id="ddresult"></div>
