@@ -1,0 +1,23 @@
+[
+    {
+      "question": "Quiz question #1",
+      "options": ["correct answer 1", "wrong answer", "wrong answer", "wrong answer"],
+      "correctIndex": 0
+    },
+    {
+      "question": "Quiz question #2",
+      "options": ["wrong answer", "correct answer 2", "wrong answer", "wrong answer"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quiz question #3",
+      "options": ["wrong answer", "correct answer 3", "wrong answer", "wrong answer"],
+      "correctIndex": 1
+    },
+    {
+      "question": "Quiz question #4",
+      "options": ["wrong answer", "correct answer 4", "wrong answer", "wrong answer"],
+      "correctIndex": 1
+    }
+  ]
+  
