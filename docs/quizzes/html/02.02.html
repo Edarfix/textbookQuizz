@@ -1,22 +1,28 @@
 <div class="ddcontainer">
     <h1>Practical exercise</h1>
-    <p class="ddinstructions">Identify training methods that correspond 
-      to either pre-training and self-supervision or fine-tuning.</p>
+    <p class="ddinstructions">Below is a list of tasks. 
+      Your goal is to classify them into Group A 
+      (tasks primarily used for pretraining/self-supervised learning) 
+      or Group B (tasks typically used for fine-tuning):
+      .</p>
   
   <!-- Liste des mots à glisser -->
   <div class="word-list" id="wordList">
     <div class="ddword" draggable="true" data-category="Pretrain">Predict missing words in the middle of a sentence </div>
-    <div class="ddword" draggable="true" data-category="Pretrain">Compress the data into a smaller representation then decompress it (Autoencoding)</div>
-    <div class="ddword" draggable="true" data-category="Pretrain">Rearrange an image that was scrambled like a jigsaw puzzle</div>
     <div class="ddword" draggable="true" data-category="Finetune">Detect the emotion in a voice recording</div>
+
+    <div class="ddword" draggable="true" data-category="Pretrain">Predict the angle an image was rotated    </div>
+    <div class="ddword" draggable="true" data-category="Pretrain">Rearrange an image that was scrambled like a jigsaw puzzle</div>
     <div class="ddword" draggable="true" data-category="Finetune">Do sentiment analysis on movie reviews</div>
     <div class="ddword" draggable="true" data-category="Finetune">Caption images in 1 to 2 sentences.</div>
+    <div class="ddword" draggable="true" data-category="Finetune">Transcript a voice recording</div>
+
   </div>
   
   <!-- Catégories (zones de drop) -->
   <div class="ddcategories">
     <div class="ddcategory" data-category="Pretrain">
-      <div class="ddcategory-title">Technique de pre-training</div>
+      <div class="ddcategory-title">Pre-training</div>
     </div>
     <div class="ddcategory" data-category="Finetune">
       <div class="ddcategory-title">Fine-tuning</div>
@@ -24,5 +30,5 @@
   </div>
 
   <!-- Bouton de soumission -->
-  <button class="submit-btn" onclick="checkAnswers()">Soumettre</button>
+  <button class="submit-btn" onclick="checkAnswers()">Submit</button>
 <div class="ddresult" id="ddresult"></div>
