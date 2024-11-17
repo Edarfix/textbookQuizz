@@ -1,5 +1,4 @@
 import json
-import os
 
 def generate_quiz_html(input_file, output_file):
     # Load JSON data from the input file
@@ -7,36 +6,44 @@ def generate_quiz_html(input_file, output_file):
         quiz_data = json.load(f)
     
     # Start building the HTML content
-    html_content = '<tr>\n'
+    html_content = '''
+    <div class="container">
+      <form id="quizForm">
+    '''
     
-    for index, item in enumerate(quiz_data):
-        if index % 2 == 0 and index > 0:
-            html_content += '</tr>\n<tr>\n'  # Start a new row every 2 questions
-
+    # Generate questions and options
+    for idx, question_data in enumerate(quiz_data):
+        question_number = idx + 1
         html_content += f'''
-        <td>
-        <div>
-            <p class="question">{index + 1}. {item["question"]}</p>
-            <ul>
+        <!-- Question {question_number} -->
+        <div class="question">
+          <h2>{question_number}. {question_data["question"]}</h2>
+          <ul class="options">
         '''
-        for option_index, option in enumerate(item["options"]):
-            is_correct = option_index == item["correctIndex"]
-            id_attr = f'id="correctString{index + 1}"' if is_correct else ""
-            value_attr = 'value="1"' if is_correct else 'value="0"'
+        for option in question_data["options"]:
             html_content += f'''
-            <input class="answer" type="radio" name="q{index + 1}" {value_attr}>
-            <label {id_attr}>{option}</label>
-            <br>
+            <li>
+              <label>
+                <input type="checkbox" name="question{question_number}" value="{option["value"]}"> {option["text"]}
+              </label>
+            </li>
             '''
-
-        html_content += '''
-            </ul>
+        html_content += f'''
+          </ul>
+          <div class="qexplanation" id="{question_number}" style="display:none">
+            {question_data["explanation"]}
+          </div>
         </div>
-        </td>
         '''
     
-    html_content += '</tr>\n'
-
+    # Add submit button and result section
+    html_content += '''
+        <button type="button" class="submit-btn" onclick="evaluateQuiz()">Soumettre</button>
+      </form>
+      <div class="result" id="qresult"></div>
+    </div>
+    '''
+    
     # Write the HTML content to the output file
     with open(output_file, 'w') as f:
         f.write(html_content)
@@ -45,7 +52,7 @@ def generate_quiz_html(input_file, output_file):
 
 # Main logic
 if __name__ == "__main__":
-    input_filename = input("Enter the input JSON filename (e.g., section_X_quiz.json): ")
+    input_filename = input("Enter the input JSON filename (e.g., quiz_questions.json): ")
     output_filename = input("Enter the output HTML filename (e.g., quiz.html): ")
 
     # Validate file extensions
@@ -53,8 +60,6 @@ if __name__ == "__main__":
         print("Error: Input file must be a .json file.")
     elif not output_filename.endswith(".html"):
         print("Error: Output file must be a .html file.")
-    elif not os.path.exists(input_filename):
-        print("Error: Input file does not exist.")
     else:
         # Generate HTML
         generate_quiz_html(input_filename, output_filename)
