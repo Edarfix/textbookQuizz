@@ -1,8 +1,10 @@
 import json
+import os
 
-def generate_quiz_html(input_file, output_file):
+
+def generate_quiz_html(input_path, output_path):
     # Load JSON data from the input file
-    with open(input_file, 'r') as f:
+    with open(input_path, 'r') as f:
         quiz_data = json.load(f)
     
     # Start building the HTML content
@@ -45,21 +47,26 @@ def generate_quiz_html(input_file, output_file):
     '''
     
     # Write the HTML content to the output file
-    with open(output_file, 'w') as f:
+    with open(output_path, 'w') as f:
         f.write(html_content)
     
-    print(f"HTML quiz generated successfully: {output_file}")
+    print(f"HTML quiz generated successfully: {output_path}")
 
 # Main logic
 if __name__ == "__main__":
-    input_filename = input("Enter the input JSON filename (e.g., quiz_questions.json): ")
-    output_filename = input("Enter the output HTML filename (e.g., quiz.html): ")
+    # Set the input and output paths
+    input_path = os.getcwd()+"/docs/quizzes/json/"
+    output_path = os.getcwd()+"/docs/quizzes/html/"
 
-    # Validate file extensions
-    if not input_filename.endswith(".json"):
-        print("Error: Input file must be a .json file.")
-    elif not output_filename.endswith(".html"):
-        print("Error: Output file must be a .html file.")
-    else:
-        # Generate HTML
-        generate_quiz_html(input_filename, output_filename)
+    # Process all JSON files in the input directory
+    for filename in os.listdir(input_path):
+        if filename.endswith(".json"):
+            input_filename = os.path.join(input_path, filename)
+            output_filename = os.path.join(output_path, filename.replace(".json", ".html"))
+            
+            # Generate HTML
+            try:
+                generate_quiz_html(input_filename, output_filename)
+                print(f"Generated: {output_filename}")
+            except Exception as e:
+                print(f"Error processing {input_filename}: {e}")

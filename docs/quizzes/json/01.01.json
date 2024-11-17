@@ -1,0 +1,42 @@
+[
+  {
+      "question": "What are the main differences between GPT-2, GPT-3, and GPT-4?",
+      "options": [
+          {"text": "The size of the model, i.e., the number of parameters", "value": "correct"},
+          {"text": "The architecture of the large language models", "value": "incorrect"},
+          {"text": "The size of the context window, i.e., the maximal number of tokens taken into account for generating the next word", "value": "correct"},
+          {"text": "The abilities", "value": "correct"}
+      ],
+      "explanation": ""
+  },
+  {
+      "question": "Which of the following statements accurately reflect the advancements and capabilities of state-of-the-art chatbots like ChatGPT, Claude, and LLaMA?",
+      "options": [
+          {"text": "They are probabilistic algorithms that predict the next likely token (unit of meaning, like a word).", "value": "correct"},
+          {"text": "They can achieve complex reading tasks by breaking problems into subproblems and using a chain of thought, i.e., explicitly reasoning to build more structured conclusions.", "value": "correct"},
+          {"text": "They can handle multimodal input and output.", "value": "correct"}
+      ],
+      "explanation": ""
+  },
+  {
+      "question": "Which of the following statements accurately reflect the advancements and capabilities of GPT models described in the text?",
+      "options": [
+          {"text": "Few-shot and zero-shot learning capabilities enable GPT models to perform tasks with little or no prior examples provided in the context window.", "value": "correct"},
+          {"text": "Metacognition in GPT models refers to their ability to modify their architecture to recognize limitations.", "value": "incorrect"},
+          {"text": "Tool use in GPT models allows them to interact with external tools, such as calculators or browsing systems, enhancing their problem-solving capabilities.", "value": "correct"}
+      ],
+      "explanation": ""
+  },
+  {
+      "question": "What tasks can be achieved at a human level or above by AI in 2024?",
+      "options": [
+          {"text": "Playing chess", "value": "correct"},
+          {"text": "Translating", "value": "correct"},
+          {"text": "Playing Minecraft", "value": "incorrect"},
+          {"text": "Passing a 1-hour Turing test", "value": "incorrect"}
+      ],
+      "explanation": ""
+  }
+]
+
+  
