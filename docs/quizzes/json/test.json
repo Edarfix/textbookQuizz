@@ -1,23 +1,22 @@
 [
     {
-      "question": "Quiz question #1",
-      "options": ["correct answer 1", "wrong answer", "wrong answer", "wrong answer"],
-      "correctIndex": 0
+      "question": "Quels pays font partie de l'Union européenne ?",
+      "options": [
+        {"text": "France", "value": "correct"},
+        {"text": "Allemagne", "value": "correct"},
+        {"text": "Suisse", "value": "incorrect"}
+      ],
+      "explanation": ""
     },
     {
-      "question": "Quiz question #2",
-      "options": ["wrong answer", "correct answer 2", "wrong answer", "wrong answer"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Quiz question #3",
-      "options": ["wrong answer", "correct answer 3", "wrong answer", "wrong answer"],
-      "correctIndex": 1
-    },
-    {
-      "question": "Quiz question #4",
-      "options": ["wrong answer", "correct answer 4", "wrong answer", "wrong answer"],
-      "correctIndex": 1
+      "question": "Quelles sont les couleurs primaires ?",
+      "options": [
+        {"text": "Rouge", "value": "correct"},
+        {"text": "Bleu", "value": "correct"},
+        {"text": "Jaune", "value": "correct"},
+        {"text": "Vert", "value": "incorrect"}
+      ],
+      "explanation": "The primary colors are Red, Blue, and Yellow; Green is not."
     }
   ]
   
